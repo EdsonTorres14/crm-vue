@@ -1,0 +1,13 @@
+VUE ROUTER
+ROUTING EN SPA
+
+El routing nos permite tener diferentes URL´s o páginas en nuestros proyectos de VUE.js
+
+Conforme el poryecto crece, tener en solo archivo es más complicado de mantener y controlar; con el routing puedes tener 
+diferentes páginas como tradicionalmente harias un sitio web.
+
+Ventajas:
+    - Vue router es el router oficial para Vue.js
+    - Contiene todas las funciones para enlazar a otras paginas, redireccionar al usuario, obtener valores de la URL o pasar props 
+        de una pantalla a otra; todo esto ayuda a no repetir código.
+    
