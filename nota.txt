@@ -20,4 +20,5 @@ FormKit:
     Incluye:
         - Accesibilidad, Validación, Estilos todo viene incluido.
         - Te va ahorrar una gran cantidad de tiempo cuando trabajes con fomularios de tus aplicaciones en vue.js.
-        - https://formkit.com/
+    
+    https://formkit.com/
