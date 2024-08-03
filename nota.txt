@@ -10,4 +10,14 @@ Ventajas:
     - Vue router es el router oficial para Vue.js
     - Contiene todas las funciones para enlazar a otras paginas, redireccionar al usuario, obtener valores de la URL o pasar props 
         de una pantalla a otra; todo esto ayuda a no repetir código.
+
+
+FormKit:
+    - Nos permite crear formularios de forma rápida y lista para produccón.
+    - Cuenta con una gran cantidad de características que lo hacen una gran opcón para evitar estar repitiendo el mismo 
+        código cuando trabajas con formularios.
     
+    Incluye:
+        - Accesibilidad, Validación, Estilos todo viene incluido.
+        - Te va ahorrar una gran cantidad de tiempo cuando trabajes con fomularios de tus aplicaciones en vue.js.
+        - https://formkit.com/
