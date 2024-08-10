@@ -22,7 +22,7 @@ defineProps({
 
         <div class="mx-auto mt-10 bg-white shadow">
             <div class="mx-auto md:w-2/3 py-20 px-6">
-                <FormKit type="form">
+                <FormKit type="form" submit-label="Agregar cliente" incomplete-message="No se pudo enviar, revisa los mensajes">
                     <FormKit type="text" label="Nombre" placeholder="Nombre del cliente" validation="required"
                         :validation-messages="{ required: 'El nombre del cliente es obligatorio' }" />
 
@@ -35,6 +35,10 @@ defineProps({
                     <FormKit type="text" label="Teléfono" placeholder="Teléfono: XXX-XXX-XXXX"
                         validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         :validation-messages="{ matches: 'El formato no es valido' }" />
+
+                    <FormKit type="text" label="Empresa" placeholder="Empresa del cliente" />
+
+                    <FormKit type="text" label="Puesto" placeholder="Puesto del cliente" />
                 </FormKit>
             </div>
         </div>
