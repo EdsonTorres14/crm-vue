@@ -11,7 +11,7 @@ Ventajas:
     - Contiene todas las funciones para enlazar a otras paginas, redireccionar al usuario, obtener valores de la URL o pasar props 
         de una pantalla a otra; todo esto ayuda a no repetir código.
 
-
+____________________________________________________________________________________________________
 FormKit:
     - Nos permite crear formularios de forma rápida y lista para produccón.
     - Cuenta con una gran cantidad de características que lo hacen una gran opcón para evitar estar repitiendo el mismo 
@@ -22,3 +22,24 @@ FormKit:
         - Te va ahorrar una gran cantidad de tiempo cuando trabajes con fomularios de tus aplicaciones en vue.js.
     
     https://formkit.com/
+
+
+____________________________________________________________________________________________________
+REST API
+
+Es una API que utiliza la arquitectura de REST para su creación.
+
+Una API nos permite obtener información de otra computadora o aplicación, pero un rest api utiliza una forma especial de nombrar 
+las URL´s y ciertas reglas para obtener la información, agregarla, eliminarla o actualizarla.
+
+Es unna forma de mantener la organización para compartir los recursos de un proyectos
+Puede ser diseñada en cualquier lenguaje o framework que pueda emitir respuestas HTTP, consultar una BD y entregar respuestas JSON.
+
+URL´s y Verbos:
+    - Una API puede tener cualquier URL 
+    - En REST las URL´s deben seguir ciertos nombres.
+    - Estos nombres se asignan tambien de acuerdo a la acción que se rwaliza y van acompañados de un tipo de petición.
+
+UNA REST API HARÁ QUE TUS PROYECTOS SEAN FÁCILES DE ESCALAR Y MANTENER UN ORDEN.
+
+
