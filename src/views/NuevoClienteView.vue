@@ -1,4 +1,5 @@
 <script setup>
+import axios from 'axios';
 import { FormKit } from '@formkit/vue';
 import RouterLink from '../components/UI/RouterLink.vue';
 import Heading from '@/components/UI/Heading.vue';
@@ -13,7 +14,11 @@ const formData = {
     nombre: 'Edson'
 }
 const handleSumbit = (data) => {
-
+    axios.post('http://localhost:4000/clientes', data)
+        .then(respuesta => {
+            // Redireccionar
+        })
+        .catch(error => console.log(error))
 }
 </script>
 
@@ -29,7 +34,8 @@ const handleSumbit = (data) => {
         <div class="mx-auto mt-10 bg-white shadow">
             <div class="mx-auto md:w-2/3 py-20 px-6">
                 <FormKit type="form" submit-label="Agregar cliente"
-                    incomplete-message="No se pudo enviar, revisa los mensajes" @submit="handleSumbit" :value="formData">
+                    incomplete-message="No se pudo enviar, revisa los mensajes" @submit="handleSumbit"
+                    :value="formData">
                     <FormKit type="text" label="Nombre" name="nombre" placeholder="Nombre del cliente"
                         validation="required"
                         :validation-messages="{ required: 'El nombre del cliente es obligatorio' }" />

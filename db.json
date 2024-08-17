@@ -1,3 +1,13 @@
 {
-    "clientes": []
+  "clientes": [
+    {
+      "id": "46fc",
+      "nombre": "Edson",
+      "apellido": "Torres",
+      "email": "edson@gmail.com",
+      "telefono": "777-541-33-87",
+      "empresa": "Izzi",
+      "puesto": "Analista"
+    }
+  ]
 }
