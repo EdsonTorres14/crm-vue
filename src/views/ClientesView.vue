@@ -18,7 +18,7 @@ defineProps({
     }
 })
 
-const existeClientes = computed(() => {
+const existenClientes = computed(() => {
     return clientes.value.length > 0
 })
 </script>
@@ -31,7 +31,6 @@ const existeClientes = computed(() => {
             </RouterLink>
         </div>
         <Heading>{{ titulo }}</Heading>
-
 
         <div v-if="existenClientes" class="flow-root mx-auto  mt-10 p-5 bg-white shadow">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
