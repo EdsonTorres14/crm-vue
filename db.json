@@ -7,25 +7,8 @@
       "email": "edson@gmail.com",
       "telefono": "777-541-33-87",
       "empresa": "Izzi",
-      "puesto": "Analista"
-    },
-    {
-      "id": "52ba",
-      "nombre": "David",
-      "apellido": "Torres",
-      "email": "david@gmail.com",
-      "telefono": "777-541-3387",
-      "empresa": "izzi",
-      "puesto": "Analista"
-    },
-    {
-      "id": "6a79",
-      "nombre": "Ailani",
-      "apellido": "Torres",
-      "email": "ainali@gmail.com",
-      "telefono": "777-541-33-87",
-      "empresa": "Izzi",
-      "puesto": "Analista"
+      "puesto": "Analista",
+      "estado": 1
     }
   ]
 }

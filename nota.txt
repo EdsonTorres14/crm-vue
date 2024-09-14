@@ -26,7 +26,7 @@ FormKit:
 
 ____________________________________________________________________________________________________
 REST API
-
+json-server --watch db.json --port 4000
 Es una API que utiliza la arquitectura de REST para su creación.
 
 Una API nos permite obtener información de otra computadora o aplicación, pero un rest api utiliza una forma especial de nombrar 

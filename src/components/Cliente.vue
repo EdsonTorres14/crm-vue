@@ -25,7 +25,7 @@ const nombreCliente = computed(() => {
             <p class="text-gray-600"> {{ cliente.puesto }}</p>
         </td>
         <td class="whitespace-nowrap px-3 py-4 text-sm">
-
+            
         </td>
         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 ">
             <RouterLink to="/" class="text-indigo-600 hover:text-indigo-500">Editar</RouterLink>
