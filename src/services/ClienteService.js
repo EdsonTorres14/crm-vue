@@ -1,7 +1,7 @@
 import api from '../lib/axios'
 
 export default {
-    obterClientes() {
+    obtenerClientes() {
         return api.get('/clientes')
     },
     agregarCliente() {

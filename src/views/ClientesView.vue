@@ -8,7 +8,7 @@ import Cliente from '@/components/Cliente.vue';
 const clientes = ref([])
 
 onMounted(() => {
-    ClienteService.obterClientes
+    ClienteService.obtenerClientes
         .then(({ data }) => clientes.value = data)
         .catch(error => console.log('Hubo un error'))
 })
