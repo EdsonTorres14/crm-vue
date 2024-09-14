@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref, computed } from 'vue'
-import axios from 'axios'
+import axios from '../lib/axios';
 import RouterLink from '../components/UI/RouterLink.vue';
 import Heading from '@/components/UI/Heading.vue';
 import Cliente from '@/components/Cliente.vue';
@@ -8,7 +8,7 @@ import Cliente from '@/components/Cliente.vue';
 const clientes = ref([])
 
 onMounted(() => {
-    axios('http://localhost:4000/clientes')
+    axios('/clientes')
         .then(({ data }) => clientes.value = data)
         .catch(error => console.log('Hubo un error'))
 })
@@ -46,11 +46,7 @@ const existenClientes = computed(() => {
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
-                            <Cliente 
-                            v-for="cliente in clientes" 
-                            :key="cliente.id" 
-                            :cliente="cliente"
-                            />
+                            <Cliente v-for="cliente in clientes" :key="cliente.id" :cliente="cliente" />
                         </tbody>
                     </table>
                 </div>
