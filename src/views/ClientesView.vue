@@ -22,6 +22,7 @@ defineProps({
 const existenClientes = computed(() => {
     return clientes.value.length > 0
 })
+
 </script>
 
 <template>

@@ -6,7 +6,11 @@ import RouterLink from '../components/UI/RouterLink.vue';
 import Heading from '@/components/UI/Heading.vue';
 
 const router = useRouter()
+const route = useRouter()
 
+const { id } = route.params
+
+console.log(id)
 defineProps({
     titulo: {
         type: String
