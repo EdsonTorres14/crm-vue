@@ -14,13 +14,23 @@ const { id } = route.params
 const formData = reactive({
     nombre: '',
     apellido: '',
+    email: '',
+    telefono: '',
+    empresa: '',
+    puesto: '',
 })
 
 onMounted(() => {
     ClienteService.obtenerCliente(id)
         .then(({ data }) => {
-            formData.nombre = data.nombre,
+            /* formData.nombre = data.nombre,
                 formData.apellido = data.apellido,
+                formData.email = data.email,
+                formData.telefono = data.telefono,
+                formData.empresa = data.empresa,
+                formData.puesto = data.puesto */
+
+            Object.assign(formData, data)
         })
         .catch(error => console.log(error))
 })
@@ -62,15 +72,18 @@ const handleSumbit = (data) => {
 
                     <FormKit type="email" label="Email" name="email" placeholder="Email del cliente"
                         validation="required|email"
-                        :validation-messages="{ required: 'El email del cliente es obligatorio' }" />
+                        :validation-messages="{ required: 'El email del cliente es obligatorio' }"
+                        v-model="formData.email" />
 
                     <FormKit type="text" label="Teléfono" name="telefono" placeholder="Teléfono: XXX-XXX-XXXX"
                         validation="?matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        :validation-messages="{ matches: 'El formato no es valido' }" />
+                        :validation-messages="{ matches: 'El formato no es valido' }" v-model="formData.telefono" />
 
-                    <FormKit type="text" label="Empresa" name="empresa" placeholder="Empresa del cliente" />
+                    <FormKit type="text" label="Empresa" name="empresa" placeholder="Empresa del cliente"
+                        v-model="formData.empresa" />
 
-                    <FormKit type="text" label="Puesto" name="puesto" placeholder="Puesto del cliente" />
+                    <FormKit type="text" label="Puesto" name="puesto" placeholder="Puesto del cliente"
+                        v-model="formData.puesto" />
                 </FormKit>
             </div>
         </div>
