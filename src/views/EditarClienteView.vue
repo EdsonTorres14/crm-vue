@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, reactive } from 'vue';
 import ClienteService from '@/services/ClienteService';
 import { FormKit } from '@formkit/vue';
 import { useRouter } from 'vue-router';
@@ -11,9 +11,17 @@ const route = useRouter()
 
 const { id } = route.params
 
+const formData = reactive({
+    nombre: '',
+    apellido: '',
+})
+
 onMounted(() => {
     ClienteService.obtenerCliente(id)
-        .then(({ data }) => console.log(data))
+        .then(({ data }) => {
+            formData.nombre = data.nombre,
+                formData.apellido = data.apellido,
+        })
         .catch(error => console.log(error))
 })
 
@@ -22,10 +30,6 @@ defineProps({
         type: String
     }
 })
-
-const formData = {
-    nombre: 'Edson'
-}
 
 const handleSumbit = (data) => {
 
@@ -48,11 +52,13 @@ const handleSumbit = (data) => {
                     :value="formData">
                     <FormKit type="text" label="Nombre" name="nombre" placeholder="Nombre del cliente"
                         validation="required"
-                        :validation-messages="{ required: 'El nombre del cliente es obligatorio' }" />
+                        :validation-messages="{ required: 'El nombre del cliente es obligatorio' }"
+                        v-model="formData.nombre" />
 
                     <FormKit type="text" label="Apellido" name="apellido" placeholder="Apellido del cliente"
                         validation="required"
-                        :validation-messages="{ required: 'El apellido del cliente es obligatorio' }" />
+                        :validation-messages="{ required: 'El apellido del cliente es obligatorio' }"
+                        v-model="formData.apellido" />
 
                     <FormKit type="email" label="Email" name="email" placeholder="Email del cliente"
                         validation="required|email"
