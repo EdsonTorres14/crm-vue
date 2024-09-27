@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from 'vue';
 import ClienteService from '@/services/ClienteService';
 import { FormKit } from '@formkit/vue';
 import { useRouter } from 'vue-router';
@@ -10,7 +11,12 @@ const route = useRouter()
 
 const { id } = route.params
 
-console.log(id)
+onMounted(() => {
+    ClienteService.obtenerCliente(id)
+        .then(({ data }) => console.log(data))
+        .catch(error => console.log(error))
+})
+
 defineProps({
     titulo: {
         type: String
@@ -22,7 +28,7 @@ const formData = {
 }
 
 const handleSumbit = (data) => {
-    
+
 }
 </script>
 
